@@ -54,6 +54,10 @@ class Item(models.Model):
 
     image_tag.short_description = 'Картинка'
 
+    class Meta:
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товары'
+
 
 class ItemVolume(models.Model):
     item = models.ForeignKey(Item,on_delete=models.CASCADE,blank=True,null=True,related_name='volumes')
